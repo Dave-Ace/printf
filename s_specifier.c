@@ -14,7 +14,7 @@ int s_specifier(char *str)
 	while (str[j] != '\0')
 	{
 		_putchar(str[j]);
-		j++
+		j++;
 		n += 1;
 	}
 	return (n);
