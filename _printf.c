@@ -37,6 +37,10 @@ else if (format[i] == '%')
 _putchar('%');
 count++;
 }
+else if (format[i] == 'i')
+{
+count += _int(va_arg(args, int));
+}
 }
 else
 {
@@ -46,5 +50,5 @@ count++;
 i++;
 }
 va_end(args);
-return (0);
+return (count);
 }
