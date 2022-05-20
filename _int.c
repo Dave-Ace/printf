@@ -6,7 +6,7 @@
  */
 int _int(int n)
 {
-int m = 10, n = i, n_digit = 0, count = 0;
+int m = 10, n_digit = 0, count = 0;
 int sum, j;
 int a[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 if (n < 0)
