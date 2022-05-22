@@ -26,7 +26,7 @@ if (format[i] == 'c')
 _putchar(va_arg(args, int));
 count++;
 }
-else if (format[i] == 's' && va_arg(args, char *) != NULL)
+else if (format[i] == 's')
 {
 /* String specifier */
 str = va_arg(args, char *);
