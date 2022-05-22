@@ -38,7 +38,7 @@ else if (format[i] == '%')
 _putchar('%');
 count++;
 }
-else if (format[i] == 'i')
+else if (format[i] == 'i' || format[i] == 'd')
 {
 count += _int(va_arg(args, int));
 }
