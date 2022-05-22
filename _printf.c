@@ -13,7 +13,7 @@ int count;
 char *str = NULL;
 va_list args;
 va_start(args, format);
-if (format == NUL)
+if (format == NULL)
 return (-1);
 while (format[i] != '\0')
 {
@@ -21,12 +21,12 @@ if (format[i] == '%')
 {
 i++;
 /* Char Specifier */
-if (format[i] == 'c')
+if (format[i] == 'c' && va_arg(args, int) != 0)
 {
 _putchar(va_arg(args, int));
 count++;
 }
-else if (format[i] == 's')
+else if (format[i] == 's' && va_arg(args, char *) != NULL)
 {
 /* String specifier */
 str = va_arg(args, char *);
@@ -38,7 +38,7 @@ else if (format[i] == '%')
 _putchar('%');
 count++;
 }
-else if (format[i] == 'i')
+else if (format[i] == 'i' && va_arg(args, int) != 0)
 {
 count += _int(va_arg(args, int));
 }
