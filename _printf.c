@@ -15,6 +15,8 @@ va_list args;
 va_start(args, format);
 while (format[i] != '\0')
 {
+if (format == NULL)
+return (-1);
 if (format[i] == '%')
 {
 i++;
@@ -28,7 +30,6 @@ else if (format[i] == 's')
 {
 /* String specifier */
 str = va_arg(args, char *);
-/* functiton that handles string specifier */
 count += s_specifier(str);
 }
 else if (format[i] == '%')
