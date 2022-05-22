@@ -13,10 +13,10 @@ int count;
 char *str = NULL;
 va_list args;
 va_start(args, format);
+if (format == NUL)
+return (-1);
 while (format[i] != '\0')
 {
-if (format == NULL)
-return (-1);
 if (format[i] == '%')
 {
 i++;
