@@ -21,7 +21,7 @@ if (format[i] == '%')
 {
 i++;
 /* Char Specifier */
-if (format[i] == 'c' && va_arg(args, int) != 0)
+if (format[i] == 'c')
 {
 _putchar(va_arg(args, int));
 count++;
@@ -38,7 +38,7 @@ else if (format[i] == '%')
 _putchar('%');
 count++;
 }
-else if (format[i] == 'i' && va_arg(args, int) != 0)
+else if (format[i] == 'i')
 {
 count += _int(va_arg(args, int));
 }
